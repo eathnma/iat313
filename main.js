@@ -13,10 +13,33 @@ const scrollama = require("scrollama");
 // instantiate the scrollama
 const scroller = scrollama();
 
+// scrollama event handlers
+function handleStepEnter(response) {
+    // response = { element, direction, index }
+    console.log(response);
+    // add to color to current step
+    response.element.classList.add("is-active");
+  }
+
+function handleStepExit(response) {
+    // response = { element, direction, index }
+    console.log(response);
+    // remove color from current step
+    response.element.classList.remove("is-active");
+}
+
+function init() {
+    // set random padding for different step heights (not required)
+    step.forEach(function(step) {
+    var v = 100 + Math.floor((Math.random() * window.innerHeight) / 4);
+    step.style.padding = v + "px 0px";
+    });
 // setup the instance, pass callback functions
 scroller
   .setup({
     step: ".step",
+    debug: true,
+    offset: 0.5
   })
   .onStepEnter((response) => {
     // { element, index, direction }
@@ -29,3 +52,4 @@ scroller
 
 // setup resize event
 window.addEventListener("resize", scroller.resize);
+}
