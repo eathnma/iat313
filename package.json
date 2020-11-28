@@ -1,0 +1,28 @@
+{
+  "name": "iat313",
+  "version": "1.0.0",
+  "description": "IAT 313 Final Interactive Narrative",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eathnma/iat313.git"
+  },
+  "keywords": [
+    "Interactive",
+    "Narrative",
+    "Scrollama"
+  ],
+  "author": "Ethan Ma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eathnma/iat313/issues"
+  },
+  "homepage": "https://github.com/eathnma/iat313#readme",
+  "dependencies": {
+    "intersection-observer": "^0.11.0",
+    "scrollama": "^2.2.1"
+  }
+}
